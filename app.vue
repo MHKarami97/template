@@ -1,41 +1,34 @@
 <script setup>
-import { useStyleStore } from "@/stores/style.js";
-import { darkModeKey, styleKey } from "@/config.js";
+import { useStyleStore } from '@/stores/style.js'
+import { darkModeKey, styleKey } from '@/config.js'
 
 useHead({
   titleTemplate: (titleChunk) => {
-    const titleBase = "Admin One Vue 3 Tailwind";
+    const titleBase = 'Admin One Vue 3 Tailwind'
 
-    return titleChunk ? `${titleChunk} - ${titleBase}` : titleBase;
-  },
-});
+    return titleChunk ? `${titleChunk} - ${titleBase}` : titleBase
+  }
+})
 
-const styleStore = useStyleStore();
+const styleStore = useStyleStore()
 
-const currentStyle =
-  typeof localStorage !== "undefined" && localStorage[styleKey]
+const currentStyle = typeof localStorage !== 'undefined' && localStorage[styleKey]
     ? localStorage[styleKey]
-    : "basic";
+    : 'basic'
 
-styleStore.setStyle(currentStyle);
+styleStore.setStyle(currentStyle)
 
-const currentStoredDarkMode =
-  typeof localStorage !== "undefined" && localStorage[darkModeKey] === "1";
+const currentStoredDarkMode = typeof localStorage !== 'undefined' && localStorage[darkModeKey] === '1'
 
-if (
-  (!currentStoredDarkMode &&
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches) ||
-  currentStoredDarkMode
-) {
-  styleStore.setDarkMode(true);
+if ((!currentStoredDarkMode && typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) || currentStoredDarkMode) {
+  styleStore.setDarkMode(true)
 }
 </script>
 
 <template>
   <div>
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage/>
     </NuxtLayout>
   </div>
 </template>
