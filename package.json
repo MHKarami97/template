@@ -8,17 +8,17 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.3.2",
+    "@nuxtjs/tailwindcss": "^6.1.2",
     "@tailwindcss/forms": "^0.5.3",
-    "nuxt": "3.0.0-rc.9"
+    "nuxt": "3.0.0-rc.12"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
-    "@pinia/nuxt": "^0.4.1",
+    "@pinia/nuxt": "^0.4.3",
     "@tailwindcss/line-clamp": "^0.4.2",
     "chart.js": "^3.9.1",
     "numeral": "^2.0.6",
-    "pinia": "^2.0.21",
-    "tailwindcss": "^3.1.8"
+    "pinia": "^2.0.23",
+    "tailwindcss": "^3.2.1"
   }
 }
