@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  buildModules: [
+  modules: [
     '@pinia/nuxt',
   ],
   postcss: {

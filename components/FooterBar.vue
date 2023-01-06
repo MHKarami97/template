@@ -1,5 +1,5 @@
 <script setup>
-import { containerMaxW } from "@/config.js";
+import { containerMaxW } from "@/configs/config.js";
 
 const year = new Date().getFullYear();
 </script>

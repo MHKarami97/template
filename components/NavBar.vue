@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { mdiClose, mdiDotsVertical } from "@mdi/js";
-import { containerMaxW } from "@/config.js";
+import { containerMaxW } from "@/configs/config.js";
 
 defineProps({
   menu: {

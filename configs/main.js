@@ -1,16 +1,17 @@
-import { createApp } from "vue";
-import { createPinia } from "pinia";
+import {createApp} from "vue";
+import {createPinia, setActivePinia} from "pinia";
 
 import App from "./App.vue";
 import router from "./router";
-import { useMainStore } from "@/stores/main.js";
-import { useStyleStore } from "@/stores/style.js";
-import { darkModeKey, styleKey } from "@/config.js";
+import {useMainStore} from "@/stores/main.js";
+import {useStyleStore} from "@/stores/style.js";
+import {darkModeKey, styleKey} from "@/configs/config.js";
 
 import "./css/main.css";
 
 /* Init Pinia */
 const pinia = createPinia();
+setActivePinia(pinia);
 
 /* Create Vue app */
 createApp(App).use(router).use(pinia).mount("#app");
@@ -28,11 +29,11 @@ styleStore.setStyle(localStorage[styleKey] ?? "basic");
 
 /* Dark mode */
 if (
-  (!localStorage[darkModeKey] &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches) ||
-  localStorage[darkModeKey] === "1"
+    (!localStorage[darkModeKey] &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+    localStorage[darkModeKey] === "1"
 ) {
-  styleStore.setDarkMode(true);
+    styleStore.setDarkMode(true);
 }
 
 /* Default title tag */
@@ -40,7 +41,7 @@ const defaultDocumentTitle = "Admin One Vue 3 Tailwind";
 
 /* Set document title from route meta */
 router.afterEach((to) => {
-  document.title = to.meta?.title
-    ? `${to.meta.title} — ${defaultDocumentTitle}`
-    : defaultDocumentTitle;
+    document.title = to.meta?.title
+        ? `${to.meta.title} — ${defaultDocumentTitle}`
+        : defaultDocumentTitle;
 });

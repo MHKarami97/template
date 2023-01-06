@@ -1,6 +1,6 @@
 <script setup>
 import { mdiGithub } from "@mdi/js";
-import { gradientBgPinkRed } from "@/colors";
+import { gradientBgPinkRed } from "@/configs/colors";
 </script>
 
 <template>
