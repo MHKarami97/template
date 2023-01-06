@@ -38,11 +38,11 @@ const confirm = () => confirmCancel("confirm");
 
 const cancel = () => confirmCancel("cancel");
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && value.value) {
-    cancel();
-  }
-});
+// window.addEventListener("keydown", (e) => {
+//   if (e.key === "Escape" && value.value) {
+//     cancel();
+//   }
+// });
 </script>
 
 <template>
