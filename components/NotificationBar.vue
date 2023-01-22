@@ -46,7 +46,7 @@ const hasRightSlot = computed(() => slots.right);
           size="24"
           class="md:mr-2"
         />
-        <span class="text-center md:text-left md:py-2"><slot /></span>
+        <span class="text-center md:text-left md:py-2 md:mr-2"><slot /></span>
       </div>
       <slot v-if="hasRightSlot" name="right" />
       <BaseButton
