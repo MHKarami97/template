@@ -1,14 +1,28 @@
-export default defineNuxtConfig({
-  modules: [
-    '@pinia/nuxt',
-  ],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+export default {
+    head: {
+        meta: [
+            {charset: 'utf-8'},
+            {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+            {
+                hid: 'description',
+                name: 'description',
+                content: 'template'
+            }
+        ],
+        bodyAttrs: {
+            dir: 'rtl'
+        }
     },
-  },
-  css: [
-    '@/assets/css/main.css',
-  ]
-})
+    modules: [
+        '@pinia/nuxt',
+    ],
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
+    css: [
+        '@/assets/css/main.css',
+    ]
+}

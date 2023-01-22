@@ -4,7 +4,7 @@ import { darkModeKey, styleKey } from '@/configs/config.js'
 
 useHead({
   titleTemplate: (titleChunk) => {
-    const titleBase = 'Admin One Vue 3 Tailwind'
+    const titleBase = 'template'
 
     return titleChunk ? `${titleChunk} - ${titleBase}` : titleBase
   }
@@ -17,6 +17,7 @@ const currentStyle = typeof localStorage !== 'undefined' && localStorage[styleKe
     : 'basic'
 
 styleStore.setStyle(currentStyle)
+styleStore.setRtl()
 
 const currentStoredDarkMode = typeof localStorage !== 'undefined' && localStorage[darkModeKey] === '1'
 
@@ -26,7 +27,7 @@ if ((!currentStoredDarkMode && typeof window !== 'undefined' && window.matchMedi
 </script>
 
 <template>
-  <div>
+  <div dir="rtl">
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>

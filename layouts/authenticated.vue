@@ -14,7 +14,7 @@ useMainStore().setUser({
     "https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93",
 });
 
-const layoutAsidePadding = "xl:pl-60";
+const layoutAsidePadding = "xl:pr-60";
 
 const styleStore = useStyleStore();
 
@@ -48,7 +48,7 @@ const menuClick = (event, item) => {
     <div
       :class="[
         layoutAsidePadding,
-        { 'ml-60 lg:ml-0': layoutStore.isAsideMobileExpanded },
+        { 'mr-60 lg:mr-0': layoutStore.isAsideMobileExpanded },
       ]"
       class="pt-14 min-h-screen w-screen transition-position lg:w-auto bg-gray-50 dark:bg-slate-800 dark:text-slate-100"
     >
@@ -56,7 +56,7 @@ const menuClick = (event, item) => {
         :menu="menuNavBar"
         :class="[
           layoutAsidePadding,
-          { 'ml-60 lg:ml-0': layoutStore.isAsideMobileExpanded },
+          { 'mr-60 lg:mr-0': layoutStore.isAsideMobileExpanded },
         ]"
         @menu-click="menuClick"
       >
@@ -67,8 +67,8 @@ const menuClick = (event, item) => {
           <BaseIcon
             :path="
               layoutStore.isAsideMobileExpanded
-                ? mdiBackburger
-                : mdiForwardburger
+                ? mdiForwardburger
+                : mdiBackburger
             "
             size="24"
           />

@@ -10,15 +10,16 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@tailwindcss/forms": "^0.5.3",
-    "nuxt": "3.0.0-rc.14"
+    "nuxt": "3.0.0"
   },
   "dependencies": {
     "@mdi/js": "^7.1.96",
     "@pinia/nuxt": "^0.4.6",
     "@tailwindcss/line-clamp": "^0.4.2",
-    "chart.js": "^4.1.2",
+    "chart.js": "^4.2.0",
     "numeral": "^2.0.6",
-    "pinia": "^2.0.28",
-    "tailwindcss": "^3.2.4"
+    "pinia": "^2.0.29",
+    "tailwindcss": "^3.2.4",
+    "tailwindcss-rtl": "^0.9.0"
   }
 }
