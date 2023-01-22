@@ -49,7 +49,7 @@ export default [
     icon: mdiAccountCircle,
   },
   {
-    to: "/login",
+    to: "/",
     label: "Login",
     icon: mdiLock,
   },
