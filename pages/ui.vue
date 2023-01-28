@@ -110,7 +110,7 @@ const styleStore = useStyleStore();
           >
             <BaseButton
                 label="Toggle"
-                color="contrast"
+                color="whiteDark"
                 @click="styleStore.setDarkMode()"
             />
           </div>
@@ -259,7 +259,7 @@ const styleStore = useStyleStore();
         </NotificationBar>
 
         <NotificationBar
-            color="contrast"
+            color="whiteDark"
             :icon="mdiContrastCircle"
             :outline="notificationsOutline"
         >
@@ -297,7 +297,7 @@ const styleStore = useStyleStore();
                 :rounded-full="buttonsRounded"
             />
             <BaseButton
-                color="contrast"
+                color="whiteDark"
                 label="Button"
                 :small="buttonsSmall"
                 :outline="buttonsOutline"
@@ -351,7 +351,7 @@ const styleStore = useStyleStore();
                 :rounded-full="buttonsRounded"
             />
             <BaseButton
-                color="contrast"
+                color="whiteDark"
                 label="Button"
                 :icon="mdiOpenInNew"
                 :small="buttonsSmall"
@@ -409,7 +409,7 @@ const styleStore = useStyleStore();
                 :rounded-full="buttonsRounded"
             />
             <BaseButton
-                color="contrast"
+                color="whiteDark"
                 :icon="mdiOpenInNew"
                 :small="buttonsSmall"
                 :outline="buttonsOutline"

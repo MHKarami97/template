@@ -51,7 +51,7 @@ const submitPass = () => {
               target="_blank"
               :icon="mdiGithub"
               label="Star on GitHub"
-              color="contrast"
+              color="whiteDark"
               rounded-full
               small
           />
